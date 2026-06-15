@@ -5,7 +5,10 @@ namespace Recycle.Data.Models
 {
     public class User : IdentityUser
     {
-        
+        public double Coins { get; set; }
+
+        public virtual ICollection<Transaction> Transactions { get; set; }
+        public virtual ICollection<Otp> Otps { get; set; }
 
 
     }
